@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shop_app/constants.dart';
 import 'package:shop_app/screens/home/home_screen.dart';
+import 'package:shop_app/screens/events/events_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,7 +18,12 @@ class MyApp extends StatelessWidget {
         textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomeScreen(),
+      // home: HomeScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => HomeScreen(),
+        '/events': (context) => EventsScreen(),
+      },
     );
   }
 }
