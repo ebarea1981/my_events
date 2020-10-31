@@ -34,6 +34,9 @@ class _CategoriesState extends State<Categories> {
         setState(() {
           selectedIndex = index;
         });
+        if (selectedIndex == 1) {
+          Navigator.pushNamed(context, '/events');
+        }
       },
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
